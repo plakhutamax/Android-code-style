@@ -340,6 +340,17 @@ int longName =
         anotherVeryLongVariable + anEvenLongerOne - thisRidiculousLongOne + theFinalOne;
 ```
 
+__Аргументы функций__
+
+Аргументы функций переносим после запятой. Если переносим аргументы, располагаем каждый аргумент на новой строке:
+
+```java
+public static someLongFunctionWithLongArguments(String longArgumentNumberOne,
+        String longArgumentNumberTwo,
+        String longArgumentNumberThree,
+        String longArgumentNumberFour);
+```
+
 __Цепочки вызовов (method chaining)__
 
 Каждый вызов метода - с новой строки. Метод начинается с точки:
@@ -351,6 +362,33 @@ new Builder().with(context)
         .build()
 ```
 
+### 2.2.11 Условия
+
+Короткие условия __всегда__ должны быть первыми. Если есть быстрая ветка выхода из функции - она должна быть первой.
+
+```java
+public func() {
+    if (view == null) {
+        return;
+    }
+
+    view.doMethod1();
+    view.updateState();
+    interactor.doMethod2();
+}
+```
+
+```java
+public func() {
+    if (state != Initialized) {
+        initialize();
+    } else {
+        doMethod1();
+        updateState();
+        startAsyncRunner();
+    }
+}
+```
 ## 2.3 Правила XML
 
 ### 2.3.1 Использование закрывающего тега
