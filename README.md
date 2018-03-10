@@ -345,10 +345,11 @@ __Аргументы функций__
 Аргументы функций переносим после запятой. Если переносим аргументы, располагаем каждый аргумент на новой строке:
 
 ```java
-public static someLongFunctionWithLongArguments(String longArgumentNumberOne,
-        String longArgumentNumberTwo,
-        String longArgumentNumberThree,
-        String longArgumentNumberFour);
+someLongFunctionWithLongArguments(longArgumentNumberOne,
+        longArgumentNumberTwo,
+        longArgumentNumberThree,
+        longArgumentNumberFour
+);
 ```
 
 __Цепочки вызовов (method chaining)__
